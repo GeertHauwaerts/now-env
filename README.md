@@ -17,7 +17,7 @@ This package does absolutely nothing when running in a Now instance.
 Use composer to add the library:
 
 ```shell
-composer require GeertHauwaerts/now-env
+composer require geerthauwaerts/now-env
 ```
 
 ## Usage
