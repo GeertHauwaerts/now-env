@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "alias": [
+    "now-env.now.sh"
+  ],
+  "env": {
+    "BOOL_TRUE": true,
+    "BOOL_FALSE": false,
+    "STRING_TRUE": "true",
+    "STRING_FALSE": "false",
+    "NUMBER_ZERO": 0,
+    "NUMBER_ONE": 1,
+    "NULL": null,
+    "STRING_EMPTY": "",
+    "STRING_TEXT": "meow"
+  },
+  "builds": [
+    {
+      "src": "www/package.json",
+      "use": "@now/next",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    },
+    {
+      "src": "api/posts/*.js",
+      "use": "@now/node",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/www/$1"
+    }
+  ]
+}

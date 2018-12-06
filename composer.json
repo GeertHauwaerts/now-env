@@ -1,0 +1,33 @@
+{
+  "name": "GeertHauwaerts/now-env",
+  "description": "Load the `now.json` variables into your development environment.",
+  "keywords": [
+    "env",
+    "now-env",
+    "environment"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Geert Hauwaerts",
+      "email": "geert@hauwaerts.be",
+      "homepage": "https://www.hauwaerts.be"
+    },
+    {
+      "name": "Vance Lucas",
+      "email": "vance@vancelucas.com",
+      "homepage": "http://www.vancelucas.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  },
+  "autoload": {
+    "psr-4": {
+      "NowEnv\\": "src/"
+    }
+  }
+}

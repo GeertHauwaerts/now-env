@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "alias": [
+    "now-env.now.sh"
+  ],
+  "env": {
+    "SPVAR1": "$a6^C7k%zs+e^.jvjXk",
+    "SPVAR2": "?BUty3koaV3%GA*hMAwH}B",
+    "SPVAR3": "jdgEB4{QgEC]HL))&GcXxokB+wqoN+j>xkV7K?m$r",
+    "SPVAR4": "22222:22#2^{",
+    "SPVAR5": "test some escaped characters like a quote \" or maybe a backslash \\"
+  },
+  "builds": [
+    {
+      "src": "www/package.json",
+      "use": "@now/next",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    },
+    {
+      "src": "api/posts/*.js",
+      "use": "@now/node",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/www/$1"
+    }
+  ]
+}
