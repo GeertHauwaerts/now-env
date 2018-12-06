@@ -1,5 +1,5 @@
 {
-  "name": "GeertHauwaerts/now-env",
+  "name": "geerthauwaerts/now-env",
   "description": "Load the `now.json` variables into your development environment.",
   "keywords": [
     "env",
